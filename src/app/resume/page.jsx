@@ -65,7 +65,7 @@ const resumeData = {
   education: [
     {
       degree: "Diploma in Engineering",
-      institution: "Kurigram Polytechnic Institute | Computer Science & Technology",
+      institution: "Dinajpur Polytechnic Institute | Computer Science & Technology",
       period: "2022–Present",
     },
   ],
@@ -73,7 +73,7 @@ const resumeData = {
     {
       name: "Complete Web Development With Programming Hero",
       issuer: "Programming Hero | Remote",
-      year: "2025",
+      year: "2024",
       link: "#"
     },
   ],
