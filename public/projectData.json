@@ -1,0 +1,110 @@
+[
+  {
+    "_id": 1,
+    "projectName": "Book Galaxy",
+    "projectImage": "https://res.cloudinary.com/dgyjmusnm/image/upload/v1754942269/abumahid/Screenshot%202025-08-12%20014603.png.png",
+    "slogan": "Book Galaxy built with React, Firebase, and MongoDB. This project main theme CRUD operation with book related product.",
+    "features": [
+      "Authentication with Firebase (Login/Register)",
+      "Book Management - Add, Edit, Delete Books",
+      "Borrow & Return System with user dashboard",
+      "Filter by Categories to explore books",
+      "Book Ratings & Tips from users",
+      "Protected Routes using JWT & PrivateRoute"
+    ],
+    "technologies": [
+      "React",
+      "Firebase",
+      "MongoDB",
+      "Lottie-React",
+      "React-router-dom",
+      "React-hook-form",
+      "React-icons",
+      "React-simple-typewriter",
+      "React-tooltip",
+      "Sweetalert2",
+      "Swiper",
+      "Tailwind CSS",
+      "DaisyUI",
+      "React-helmet"
+    ],
+    "liveLink": "",
+    "clientLink": "",
+    "serverLink": "",
+    "description": "Book Galaxy is a modern, responsive, and feature-rich Book Management Platform built using React, Firebase Authentication, Tailwind CSS, Framer Motion, and MongoDB (via a backend API). It allows users to explore books by category, borrow and return them, manage their library, and much more."
+  },
+  {
+    "_id": 2,
+    "projectName": "The Daily Bulletin",
+    "projectImage": "https://i.ibb.co.com/7J0fR98r/the-dailybulletin.png",
+    "slogan": "A modern, full-stack newspaper platform with role-based access, payments, and dynamic dashboards.",
+    "features": [
+      "Fully Responsive Design - Suitable for all devices, including mobile, tablet, and desktop",
+      "User Authentication - Easy registration and login with Email/Password and Google",
+      "Role-Based Interface - Separate dashboards and features for regular users, premium users, and administrators",
+      "Article Management - Users can easily add, update, and delete their news articles",
+      "Dynamic Dashboard - Data visualization with charts using Recharts",
+      "Fast Data Loading - Uses TanStack Query for efficient fetching and caching",
+      "Payment System - Secure subscription purchases through Stripe"
+    ],
+    "technologies": [
+      "React.js",
+      "MongoDB",
+      "Express.js",
+      "Node.js",
+      "React Router",
+      "Tailwind CSS",
+      "Miraki UI",
+      "TanStack Query",
+      "Axios",
+      "React Hook Form",
+      "Firebase Authentication",
+      "Recharts",
+      "Framer Motion",
+      "Swiper.js",
+      "React CountUp",
+      "SweetAlert2",
+      "React-Toastify"
+    ],
+    "liveLink": "",
+    "clientLink": "",
+    "serverLink": "",
+    "description": "The Daily Bulletin The Daily Bulletin is a modern, full-stack newspaper platform built with the MERN stack (MongoDB, Express.js, React.js, Node.js). It offers a seamless and interactive experience for reading, writing, and managing news articles, featuring role-based access for regular users, premium subscribers, and administrators."
+  },
+  {
+    "_id": 3,
+    "projectName": "WorkLynx",
+    "projectImage": "https://i.ibb.co.com/zTsMFctW/Screenshot-2025-08-13-130839.png",
+    "slogan": "WorkLynx is a dynamic freelance task marketplace designed to bridge the gap between clients and freelancers.",
+   "features": [
+    "Authentication System - Email/Password login & registration, Google Sign-In, Protected routes with access control",
+    "Task Management (CRUD) - Add, update, delete, and view tasks, Browse all public tasks, See your own posted tasks in a private dashboard",
+    "Bid Counter System - Task detail pages show a dynamic bid count, Bid count updates with each click",
+    "Responsive UI - Fully responsive layout for mobile, tablet, and desktop users, Inspired by modern freelance platforms with a unique twist",
+    "Design & UI Libraries - TailwindCSS, DaisyUI, Lucide Icons, Swiper, Lottie animations, React Simple Typewriter adds a playful dynamic touch"
+  ],
+    "technologies": [
+    "React 19 (Vite)",
+    "React Router v7",
+    "Firebase Auth & Hosting",
+    "Axios",
+    "Tailwind CSS",
+    "DaisyUI",
+    "SweetAlert2",
+    "React Toastify",
+    "Lottie",
+    "Swiper",
+    "Node.js",
+    "Express.js",
+    "MongoDB (with Mongoose)",
+    "RESTful APIs",
+    "CORS & environment variable protection"
+  ],
+    "liveLink": "",
+    "clientLink": "",
+    "serverLink": "",
+    "description": "WorkLynx is a modern and dynamic freelance task marketplace designed to seamlessly connect clients and freelancers. It allows users to post tasks, browse available projects, place bids, and manage their own freelance listings with ease. The platform features a smooth and intuitive user interface, ensuring an enjoyable experience across devices. Authentication is powered by Firebase, enabling secure email/password login, Google Sign-In, and role-based access control for different types of users. On the client side, React with Vite, React Router, Tailwind CSS, DaisyUI, and interactive libraries like Lottie, Swiper, and React Toastify provide a responsive and engaging interface. The backend API, built with Node.js, Express.js, and MongoDB, manages all task-related data and performs full CRUD operations efficiently. Additional features include real-time bid counters and secure communication with the database, making WorkLynx a reliable and feature-rich platform for modern freelance work."
+  }
+ 
+
+]
