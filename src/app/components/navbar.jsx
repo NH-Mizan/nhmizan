@@ -52,7 +52,7 @@ export default function Navbar() {
                   to={item.path}
                   smooth={true}
                   duration={500}
-                  className="flex items-center gap-2 px-3 py-2 rounded-full text-sm text-white hover:bg-violet-500 transition-colors cursor-pointer"
+                  className="flex items-center gap-2 px-3 py-2 rounded-full text-sm text-white hover:bg-[#14a468] transition-colors cursor-pointer"
                 >
                   {item.icon}
                   {item.name}
@@ -61,7 +61,7 @@ export default function Navbar() {
                 <Link
                   key={item.name}
                   href={item.path}
-                  className="flex items-center gap-2 px-3 py-2 rounded-full text-sm text-white hover:bg-violet-500 transition-colors"
+                  className="flex items-center gap-2 px-3 py-2 rounded-full text-sm text-white hover:bg-[#14a468] transition-colors"
                 >
                   {item.icon}
                   {item.name}
@@ -82,7 +82,7 @@ export default function Navbar() {
                 href={item.path}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white hover:text-violet-400 transition-colors"
+                className="text-white hover:text-[#14a468] transition-colors"
               >
                 {item.icon}
               </motion.a>

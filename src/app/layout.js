@@ -12,6 +12,9 @@ const inter = Inter({
 export const metadata = {
   title: "Nahid Hasan Mizan",
   description: "My portfolio",
+    icons: {
+    icon: "/images/nh.png",
+  },
 };
 
 export default function RootLayout({ children }) {

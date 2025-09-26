@@ -2,7 +2,7 @@
   {
     "_id": 1,
     "projectName": "Book Galaxy",
-    "projectImage": "https://res.cloudinary.com/dgyjmusnm/image/upload/v1754942269/abumahid/Screenshot%202025-08-12%20014603.png.png",
+    "projectImage": "https://i.ibb.co.com/xS1dWFRr/Screenshot-105.png",
     "slogan": "Book Galaxy built with React, Firebase, and MongoDB. This project main theme CRUD operation with book related product.",
     "features": [
       "Authentication with Firebase (Login/Register)",
@@ -36,7 +36,7 @@
   {
     "_id": 2,
     "projectName": "The Daily Bulletin",
-    "projectImage": "https://i.ibb.co.com/7J0fR98r/the-dailybulletin.png",
+    "projectImage": "https://i.ibb.co.com/tnRsRXC/Screenshot-106.png",
     "slogan": "A modern, full-stack newspaper platform with role-based access, payments, and dynamic dashboards.",
     "features": [
       "Fully Responsive Design - Suitable for all devices, including mobile, tablet, and desktop",
@@ -74,7 +74,7 @@
   {
     "_id": 3,
     "projectName": "WorkLynx",
-    "projectImage": "https://i.ibb.co.com/zTsMFctW/Screenshot-2025-08-13-130839.png",
+    "projectImage": "https://i.ibb.co.com/1JJCKCnC/Screenshot-107.png",
     "slogan": "WorkLynx is a dynamic freelance task marketplace designed to bridge the gap between clients and freelancers.",
    "features": [
     "Authentication System - Email/Password login & registration, Google Sign-In, Protected routes with access control",
