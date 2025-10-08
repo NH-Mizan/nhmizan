@@ -1,15 +1,15 @@
 [
   {
     "_id": 1,
-    "projectName": "Book Galaxy",
-    "projectImage": "https://i.ibb.co.com/xS1dWFRr/Screenshot-105.png",
-    "slogan": "Book Galaxy built with React, Firebase, and MongoDB. This project main theme CRUD operation with book related product.",
+    "projectName": "codenest24",
+    "projectImage": "https://i.ibb.co.com/JFGXJqC1/download.png",
+    "slogan": "Codenest24 built with React, Firebase, and MongoDB. This project main theme CRUD operation with book related product.",
     "features": [
       "Authentication with Firebase (Login/Register)",
       "Book Management - Add, Edit, Delete Books",
       "Borrow & Return System with user dashboard",
       "Filter by Categories to explore books",
-      "Book Ratings & Tips from users",
+      
       "Protected Routes using JWT & PrivateRoute"
     ],
     "technologies": [
@@ -28,10 +28,10 @@
       "DaisyUI",
       "React-helmet"
     ],
-    "liveLink": "",
-    "clientLink": "",
+    "liveLink": "https://codenest24-it-project.vercel.app/",
+    "clientLink": "https://github.com/NH-Mizan/codenest24-it-project.git",
     "serverLink": "",
-    "description": "Book Galaxy is a modern, responsive, and feature-rich Book Management Platform built using React, Firebase Authentication, Tailwind CSS, Framer Motion, and MongoDB (via a backend API). It allows users to explore books by category, borrow and return them, manage their library, and much more."
+    "description": "codenest 24 is a modern, responsive, and feature-rich it Company  Management Platform built using React, Firebase Authentication, Tailwind CSS, Framer Motion, and MongoDB (via a backend API).."
   },
   {
     "_id": 2,
