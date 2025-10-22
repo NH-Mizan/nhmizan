@@ -85,7 +85,7 @@ export default function Navbar() {
                 className="text-white hover:text-[#14a468] transition-colors"
               >
                 {item.icon}
-              </motion.a>
+              </motion.a>  
             ))}
           </div>
         </div>
