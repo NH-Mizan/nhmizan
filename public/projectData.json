@@ -6,7 +6,7 @@
     "slogan": "Codenest24 built with React, Firebase, and MongoDB. This project main theme CRUD operation with book related product.",
     "features": [
       "Authentication with Firebase (Login/Register)",
-      "Book Management - Add, Edit, Delete Books",
+      "IT Management - Add, Edit, Delete ",
       "Borrow & Return System with user dashboard",
       "Filter by Categories to explore books",
       
@@ -18,7 +18,6 @@
       "MongoDB",
       "Lottie-React",
       "React-router-dom",
-      "React-hook-form",
       "React-icons",
       "React-simple-typewriter",
       "React-tooltip",
@@ -54,7 +53,7 @@
       "Node.js",
       "React Router",
       "Tailwind CSS",
-      "Miraki UI",
+
       "TanStack Query",
       "Axios",
       "React Hook Form",
