@@ -1,25 +1,34 @@
-# Personal Portfolio & Blog Website
+# Personal Portfolio Website
 
-#### This is a personal portfolio and blog website built with Next.js. It showcases a portfolio introduction, featured projects, a blog, and a contact form.
+This is a Next.js portfolio website with a public-facing portfolio and an admin dashboard for managing projects.
 
 ## Features
 
-- Message sending functionality.
-- Animations
-- Customizable and responsive
+- Portfolio homepage with sections for hero, skills, projects, education, work, services, and contact
+- MongoDB-backed project storage
+- Admin dashboard with login, create, update, and delete project support
+- Public project section automatically loads from the database
+- Responsive UI with animations
 
-## Pages
+## Admin Dashboard
 
-- **Home Page**
-  - Displays portfolio introduction (name, bio, and profile picture).
-  - Showcases skills using icons or skill bars.
-  - Highlights featured projects.
-  - Includes a resume download button.
-- **Projects Page**
+- Visit `/admin`
+- Login with `ADMIN_USERNAME` and `ADMIN_PASSWORD`
+- Add, edit, and delete projects from the dashboard
+- Project changes appear automatically on the public website
 
-  - Lists projects with images, descriptions, and links.
+## Environment Setup
 
-- **Blog Page**
-  - Displays a list of blog posts
-- **Contact Page**
-  - A simple contact form (name, email, message).
+Create a `.env.local` file from `.env.example` and set:
+
+- `MONGODB_URI`
+- `MONGODB_DB`
+- `ADMIN_USERNAME`
+- `ADMIN_PASSWORD`
+- `ADMIN_SECRET`
+
+## Development
+
+```bash
+npm run dev
+```

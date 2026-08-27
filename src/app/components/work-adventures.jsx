@@ -54,7 +54,7 @@ export default function Work() {
 
           <h2
             id="education-title"
-            className="text-4xl lg:text-5xl font-bold text-center text-pry"
+            className="font-section-title text-4xl lg:text-5xl font-bold text-center text-pry"
           >
             Work  <span className="text-violet-500"> Adventures</span>
           </h2>

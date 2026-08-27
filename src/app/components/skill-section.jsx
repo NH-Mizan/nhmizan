@@ -28,7 +28,7 @@ export default function SkillsSection() {
         <div className="flex items-center justify-center gap-4">
           <div className="w-[3px] h-12 bg-violet-500"></div>
 
-          <h2 className="text-4xl lg:text-5xl text-pry font-bold text-center">
+          <h2 className="font-section-title text-4xl lg:text-5xl text-pry font-bold text-center">
             My Best <span className="text-violet-500">Skills</span> &{" "}
             <span className="text-violet-500">Technologies</span>
           </h2>

@@ -8,6 +8,7 @@ import {
   FolderGit2,
   Briefcase,
   FileText,
+  LayoutDashboard,
   Github,
   Linkedin,
   Mail,
@@ -26,6 +27,7 @@ export default function Navbar() {
     { name: "Services", path: "servicesSection", icon: <Briefcase size={18} />, scroll: true },
     { name: "Contact", path: "contactSection", icon: <PhoneCall size={18} />, scroll: true },
     { name: "Resume", path: "/resume", icon: <FileText size={18} />, scroll: false },
+    { name: "Dashboard", path: "/admin", icon: <LayoutDashboard size={18} />, scroll: false },
   ];
 
   const socialLinks = [
@@ -35,8 +37,8 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="sticky top-0 w-full z-50 bg-black/50 backdrop-blur-md border-b border-white/20">
-      <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+    <nav className="fixed inset-x-0 top-0 z-50 w-full border-b border-white/20 bg-black/80 backdrop-blur-md">
+      <div className="container mx-auto flex items-center justify-between px-4 py-3 lg:px-20">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
           <Image src="/nhmizanlogo.png" width={200} height={50} alt="Logo" className="object-contain" />
