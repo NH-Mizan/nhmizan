@@ -1,29 +1,22 @@
 import { MongoClient } from "mongodb";
 
-const uri = process.env.MONGODB_URI;
 const dbName = process.env.MONGODB_DB || "nhmizan_portfolio";
-
-let client;
 let clientPromise;
 
-if (uri) {
-  if (process.env.NODE_ENV === "development") {
-    if (!global._mongoClientPromise) {
-      client = new MongoClient(uri);
-      global._mongoClientPromise = client.connect();
-    }
-    clientPromise = global._mongoClientPromise;
-  } else {
-    client = new MongoClient(uri);
-    clientPromise = client.connect();
-  }
+function getClientPromise() {
+  if (clientPromise) return clientPromise;
+
+  const uri = process.env.MONGODB_URI;
+  if (!uri) throw new Error("Missing MONGODB_URI environment variable.");
+
+  const client = new MongoClient(uri, {
+    serverSelectionTimeoutMS: 10000,
+  });
+  clientPromise = client.connect();
+  return clientPromise;
 }
 
 export async function getDatabase() {
-  if (!clientPromise) {
-    throw new Error("Missing MONGODB_URI environment variable.");
-  }
-
-  const connectedClient = await clientPromise;
+  const connectedClient = await getClientPromise();
   return connectedClient.db(dbName);
 }
