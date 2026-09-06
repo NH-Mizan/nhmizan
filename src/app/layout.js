@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
         <div className="site-animated-bg" aria-hidden="true" />
         <ProgrammingBackground />
         <Navbar />
-        <main className="relative z-10 pt-24">{children}</main>
+        <main className="relative z-10 pb-24 pt-24 md:pb-0">{children}</main>
         <Footer/>
       </body>
     </html>
