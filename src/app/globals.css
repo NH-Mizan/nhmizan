@@ -2,6 +2,8 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+  overscroll-behavior-y: none;
 }
 
 html,
@@ -37,6 +39,8 @@ body {
   color: var(--foreground);
   font-family: Inter, "Inter Fallback", sans-serif;
   overflow-x: hidden;
+  overscroll-behavior-x: none;
+  -webkit-overflow-scrolling: touch;
   line-height: 1.6;
   letter-spacing: 0.01em;
   text-rendering: optimizeLegibility;
