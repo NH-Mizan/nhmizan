@@ -21,9 +21,12 @@ function ensureArray(value) {
 }
 
 export function normalizeProjectPayload(payload = {}) {
+  const images = ensureArray(payload.projectImages);
+  const projectImage = String(payload.projectImage || images[0] || "").trim();
   return {
     projectName: String(payload.projectName || "").trim(),
-    projectImage: String(payload.projectImage || "").trim(),
+    projectImage,
+    projectImages: images.length ? images : projectImage ? [projectImage] : [],
     slogan: String(payload.slogan || "").trim(),
     description: String(payload.description || "").trim(),
     liveLink: String(payload.liveLink || "").trim(),

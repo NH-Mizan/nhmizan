@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { cookies } from "next/headers";
+import { ObjectId } from "mongodb";
 
 import { getSessionCookieConfig, verifySessionToken } from "@/lib/admin-auth";
 import { deleteProject, updateProject } from "@/lib/projects";
@@ -17,8 +18,13 @@ export async function PUT(request, { params }) {
       return NextResponse.json({ message: "Unauthorized" }, { status: 401 });
     }
 
+    const { id } = await params;
+    if (!ObjectId.isValid(id)) {
+      return NextResponse.json({ message: "Invalid project id." }, { status: 400 });
+    }
+
     const payload = await request.json();
-    const project = await updateProject(params.id, payload);
+    const project = await updateProject(id, payload);
     return NextResponse.json({ project });
   } catch (error) {
     return NextResponse.json(
@@ -37,7 +43,12 @@ export async function DELETE(_request, { params }) {
       return NextResponse.json({ message: "Unauthorized" }, { status: 401 });
     }
 
-    await deleteProject(params.id);
+    const { id } = await params;
+    if (!ObjectId.isValid(id)) {
+      return NextResponse.json({ message: "Invalid project id." }, { status: 400 });
+    }
+
+    await deleteProject(id);
     return NextResponse.json({ success: true });
   } catch (error) {
     return NextResponse.json(

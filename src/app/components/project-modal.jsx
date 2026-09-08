@@ -1,9 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ExternalLink, Globe, X } from "lucide-react";
+import { ChevronLeft, ChevronRight, ExternalLink, Globe, X } from "lucide-react";
+import { useState } from "react";
 
 export default function ProjectModal({ project, onClose }) {
+  const images = project?.projectImages?.length ? project.projectImages : [project?.projectImage];
+  const [imageIndex, setImageIndex] = useState(0);
   if (!project) return null;
 
   return (
@@ -33,11 +36,14 @@ export default function ProjectModal({ project, onClose }) {
         <p className="text-gray-300 italic">{project.slogan}</p>
 
         {/* Image */}
+        <div className="relative">
         <img
-          src={project.projectImage}
+          src={images[imageIndex]}
           alt={project.projectName}
           className="w-full rounded-xl mt-4 mb-4 object-cover"
         />
+        {images.length > 1 && <><button type="button" aria-label="Previous image" onClick={() => setImageIndex((imageIndex - 1 + images.length) % images.length)} className="absolute left-3 top-1/2 rounded-full bg-black/60 p-2 text-white"><ChevronLeft /></button><button type="button" aria-label="Next image" onClick={() => setImageIndex((imageIndex + 1) % images.length)} className="absolute right-3 top-1/2 rounded-full bg-black/60 p-2 text-white"><ChevronRight /></button></>}
+        </div>
 
         {/* Overview */}
         <p className="text-gray-300 whitespace-pre-wrap">{project.description}</p>

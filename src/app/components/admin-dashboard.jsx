@@ -7,6 +7,7 @@ import { useRouter } from "next/navigation";
 const emptyForm = {
   projectName: "",
   projectImage: "",
+  projectImages: "",
   slogan: "",
   description: "",
   liveLink: "",
@@ -24,6 +25,7 @@ function toFormState(project) {
   return {
     projectName: project.projectName || "",
     projectImage: project.projectImage || "",
+    projectImages: Array.isArray(project.projectImages) ? project.projectImages.join("\n") : project.projectImage || "",
     slogan: project.slogan || "",
     description: project.description || "",
     liveLink: project.liveLink || "",
@@ -81,6 +83,7 @@ export default function AdminDashboard({
 
     const payload = {
       ...form,
+      projectImages: parseLines(form.projectImages || form.projectImage),
       features: parseLines(form.features),
       technologies: parseLines(form.technologies),
     };
@@ -260,6 +263,12 @@ export default function AdminDashboard({
               value={form.projectName}
               onChange={(value) => setForm((current) => ({ ...current, projectName: value }))}
               placeholder="Portfolio CMS"
+            />
+            <TextareaField
+              label="Gallery images (one URL per line)"
+              value={form.projectImages}
+              onChange={(value) => setForm((current) => ({ ...current, projectImages: value }))}
+              placeholder="https://image-1.jpg\nhttps://image-2.jpg"
             />
             <InputField
               label="Image URL"

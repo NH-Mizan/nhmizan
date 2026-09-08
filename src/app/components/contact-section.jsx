@@ -41,38 +41,46 @@ export default function Contact() {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!form.message || !form.name || !form.email) {
       toast.error("Please fill in all fields.");
       return;
     }
+    const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+    const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+
+    if (!serviceId || !templateId || !publicKey) {
+      toast.error("Email service is not configured.");
+      return;
+    }
+
     setLoading(true);
 
-    emailjs
-      .send(
-        "service_caqbaoc",
-        "template_6yip0er",
+    try {
+      await emailjs.send(
+        serviceId,
+        templateId,
         {
           from_name: form.name,
           to_name: "NH Mizan ",
           from_email: form.email,
+          reply_to: form.email,
           to_email: "nhmizan999@gmail.com",
           message: form.message,
         },
-        "ySvkxnpIiUjj_HB7R"
-      )
-      .then(() => {
-        toast.success("Your message has been sent successfully!");
-        setForm({ name: "", email: "", message: "" });
-      })
-      .catch((error) => {
-        console.error("EMAILJS ERROR:", error);
-        toast.error("Sorry, failed to send your message.");
-      })
-      .finally(() => {
-        setLoading(false);
-      });
+        { publicKey }
+      );
+      toast.success("Your message has been sent successfully!");
+      setForm({ name: "", email: "", message: "" });
+    } catch (error) {
+      console.error("EMAILJS ERROR:", error);
+      const reason = error?.text || error?.message;
+      toast.error(reason || "Sorry, failed to send your message.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (

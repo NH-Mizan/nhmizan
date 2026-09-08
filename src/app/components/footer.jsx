@@ -44,7 +44,8 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative z-10 mt-20 overflow-hidden border-t border-emerald-400/15 bg-[#03070c]/85 backdrop-blur-xl">
+    <>
+      <footer className="relative z-10 mt-20 overflow-hidden border-t border-emerald-400/15 bg-[#03070c]/85 backdrop-blur-xl">
       <div className="pointer-events-none absolute inset-0 opacity-[0.07]" aria-hidden="true">
         <div className="absolute -right-10 top-2 font-mono text-[10px] leading-5 text-emerald-300">{`const build = () => {\n  return "ideas into reality";\n};\n<> / developer / </>`}</div>
       </div>
@@ -84,13 +85,14 @@ const Footer = () => {
           <p className="hidden sm:block">Designed &amp; developed with care.</p>
         </div>
       </div>
-      <nav className="fixed inset-x-3 bottom-3 z-50 flex h-[68px] items-center justify-around rounded-2xl border border-white/15 bg-[#07121c]/95 px-1 shadow-2xl shadow-black/40 backdrop-blur-xl md:hidden" aria-label="Mobile navigation">
+      </footer>
+      <nav className="fixed inset-x-3 bottom-[max(0.75rem,env(safe-area-inset-bottom))] z-50 flex h-[68px] items-center justify-around rounded-2xl border border-white/15 bg-[#07121c]/95 px-1 shadow-2xl shadow-black/40 backdrop-blur-xl md:hidden" aria-label="Mobile navigation">
         {footerConfig.mobileNav.map((item) => {
           const Icon = item.icon;
           return <a key={item.label} href={item.href} className="flex min-w-0 flex-1 flex-col items-center gap-1 rounded-xl py-2 text-[10px] font-medium text-slate-400 transition-colors hover:bg-emerald-400/10 hover:text-emerald-300"><Icon size={20} strokeWidth={1.8} /><span>{item.label}</span></a>;
         })}
       </nav>
-    </footer>
+    </>
   );
 };
 

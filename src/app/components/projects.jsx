@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { ExternalLink, FileCode2 } from "lucide-react";
+import { ChevronLeft, ChevronRight, ExternalLink, FileCode2 } from "lucide-react";
 import ProjectModal from "./project-modal";
 
 
@@ -50,11 +50,15 @@ export default function Projects() {
         {projects.map((project, index) => (
           <motion.article
             key={project._id}
+            style={{
+              top: `${96 + index * 12}px`,
+              zIndex: index + 1,
+            }}
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
             viewport={{ once: true, amount: 0.3 }}
-            className="group grid overflow-hidden rounded-lg border border-white/10 bg-slate-900/80 shadow-[0_24px_80px_-40px_rgba(15,23,42,0.95)] backdrop-blur-xl transition-all duration-500 hover:border-emerald-400/40 hover:shadow-[0_32px_90px_-40px_rgba(16,185,129,0.35)] lg:grid-cols-2"
+            className="group grid overflow-hidden rounded-lg border border-white/10 bg-slate-900/80 shadow-[0_24px_80px_-40px_rgba(15,23,42,0.95)] backdrop-blur-xl transition-all duration-500 hover:border-emerald-400/40 hover:shadow-[0_32px_90px_-40px_rgba(16,185,129,0.35)] lg:sticky lg:grid-cols-2 lg:bg-slate-900/95"
             aria-labelledby={`project-title-${project._id}`}
           >
             <div
@@ -62,10 +66,9 @@ export default function Projects() {
                 index % 2 === 1 ? "lg:order-2" : ""
               }`}
             >
-              <img
-                src={project.projectImage}
+              <ProjectSlider
+                project={project}
                 alt={`Screenshot of ${project.projectName}`}
-                className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/75 via-slate-950/15 to-transparent" />
               <div className="absolute inset-x-5 top-5 flex items-center justify-between">
@@ -161,4 +164,16 @@ export default function Projects() {
       )}
     </section>
   );
+}
+
+function ProjectSlider({ project, alt }) {
+  const images = project.projectImages?.length ? project.projectImages : [project.projectImage];
+  const [index, setIndex] = useState(0);
+  return <div className="absolute inset-0">
+    <img src={images[index]} alt={alt} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+    {images.length > 1 && <div className="absolute inset-x-3 bottom-3 flex justify-between">
+      <button type="button" aria-label="Previous image" onClick={() => setIndex((index - 1 + images.length) % images.length)} className="rounded-full bg-slate-950/75 p-2 text-white"><ChevronLeft size={16} /></button>
+      <button type="button" aria-label="Next image" onClick={() => setIndex((index + 1) % images.length)} className="rounded-full bg-slate-950/75 p-2 text-white"><ChevronRight size={16} /></button>
+    </div>}
+  </div>;
 }
